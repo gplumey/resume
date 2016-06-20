@@ -45,3 +45,7 @@
 /server/node_modules
 /server/typings
 /server/dist
+
+
+/node_modules
+/typings
