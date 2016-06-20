@@ -1,0 +1,6 @@
+@import '../styles/_screen';
+
+.company
+{
+    @include panel($width-break-large / 2);
+}

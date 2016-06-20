@@ -1,0 +1,34 @@
+@import '../../styles/screen';
+.mission
+{
+    display: table;
+    width: 100%;
+    margin-right: $h-margin;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+    .date
+    {
+        display: table-cell;
+        width: 20%;
+        text-align: center;
+    }
+
+
+    .description
+    {
+        display: table-cell;
+        width: 80%;
+    }
+
+    .title
+    {
+        font-weight: bold;
+    }
+
+    .env
+    {
+        margin-top: $v-margin /2 ;
+        color: $secondary-color;
+    }
+}

@@ -1,0 +1,10 @@
+<md-card class="company" *ngIf="company">
+    <img md-card-image src="{{company.image}}" />
+
+    <md-card-title>{{company.name}}</md-card-title>
+    <md-card-content>{{company.detail}}</md-card-content>
+    <a href="{{company.url}}" md-button target="_blank">{{company.url}}</a>
+    <md-card-actions>
+        <button md-button (click)="return()">Retour</button>
+    </md-card-actions>
+</md-card>

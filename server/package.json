@@ -1,0 +1,24 @@
+{
+  "name": "@resume/server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "typings install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc -w",
+    "serve": "node dist/server.js",
+    "start": "concurrent \"npm run watch\" \"npm run serve\"  "
+  },
+  "author": "gplumey",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "typings": "^1.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^2.1.0",
+    "typescript": "^1.8.10"
+  }
+}

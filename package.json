@@ -1,0 +1,20 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+   "install": "cd ./common &&  npm install && cd ..  && cd ./server &&  npm install && cd .. && cd ./client &&  npm install && cd .."
+  
+  },
+  "author": "gplumey",
+  "license": "ISC",
+  "dependencies": {
+"@resume/common": "file:./common",
+"@resume/server": "file:./server",
+"@resume/client": "file:./client"
+  },
+  "devDependencies": {
+    "concurrently": "^2.1.0"
+  }
+}
