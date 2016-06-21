@@ -4,6 +4,9 @@ import * as bodyParser  from 'body-parser';
 var app:express.Express = express();
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 app.get('/', (req: express.Request, res: express.Response) => {
     res.send("Coucou my first api");
