@@ -22,6 +22,9 @@ app.route('/mail')
     res.send('Get a random book');
   })
   .post(function(req, res) {
+     res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    
       console.log(req.body);
     res.send('Add a book');
   })

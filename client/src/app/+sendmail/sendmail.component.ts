@@ -1,6 +1,6 @@
 // Angular
 import { Component, OnInit } from '@angular/core';
-import { Http, HTTP_PROVIDERS, ConnectionBackend } from '@angular/http';
+import { Http, Headers} from '@angular/http';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { Observable }     from 'rxjs/Observable';
@@ -25,7 +25,7 @@ import {CommonMail} from '@resume/common/dist/index';
     styleUrls: ['sendmail.component.css'],
     directives: [SkillComponent,
         MD_CARD_DIRECTIVES, MD_BUTTON_DIRECTIVES, MD_INPUT_DIRECTIVES, MD_ICON_DIRECTIVES, MD_CHECKBOX_DIRECTIVES],
-    providers: [Http, HTTP_PROVIDERS, ConnectionBackend, CvService],
+    providers: [CvService],
     viewProviders: [MdIconRegistry]
 })
 export class SendmailComponent implements OnInit {
@@ -48,22 +48,31 @@ export class SendmailComponent implements OnInit {
     }
 
     public send() {
+        let headers = new Headers({
+            'Content-Type': 'application/json'
+        });
+         headers.append('Access-Control-Allow-Headers', 'Content-Type');
+        headers.append('Access-Control-Allow-Methods', 'GET');
+        headers.append('Access-Control-Allow-Origin', '*');
         console.log(this.mail);
-        var path = "http://localhost:3000"+'/mail';
-        this._http.post(path, JSON.stringify(this.mail)).catch(this.handleError);
+        let s_Mail = JSON.stringify(this.mail);
+        console.log(s_Mail);
+        var path = "http://localhost:3000" + '/mail';
+        this._http.post(path, s_Mail, { headers: headers })
+        .subscribe();
     }
 
-   private handleError (error: any) {
-    // In a real world app, we might use a remote logging infrastructure
-    // We'd also dig deeper into the error to get a better message
-    let errMsg = (error.message) ? error.message :
-      error.status ? `${error.status} - ${error.statusText}` : 'Server error';
-    console.error(errMsg); // log to console instead
-    return Observable.throw(errMsg);
-  }
+    private handleError(error: any) {
+        // In a real world app, we might use a remote logging infrastructure
+        // We'd also dig deeper into the error to get a better message
+        let errMsg = (error.message) ? error.message :
+            error.status ? `${error.status} - ${error.statusText}` : 'Server error';
+        console.error(errMsg); // log to console instead
+        return Observable.throw(errMsg);
+    }
 
-    public return () {
-    this._router.navigate(['/']);
-}
+    public return() {
+        this._router.navigate(['/']);
+    }
 
 }
