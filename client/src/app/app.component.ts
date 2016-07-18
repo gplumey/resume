@@ -1,9 +1,8 @@
 import { Component , ViewEncapsulation} from '@angular/core';
-import { Routes , Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router';
+import { Router, ROUTER_DIRECTIVES} from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { CvComponent } from './+cv/';
-import { CompanyComponent } from './+company/';
-import { SendmailComponent } from './+sendmail/';
+
 
 @Component({
     moduleId: module.id,
@@ -15,11 +14,6 @@ import { SendmailComponent } from './+sendmail/';
     encapsulation:ViewEncapsulation.None
 })
 
-@Routes([
-        {path:"/", component:CvComponent},
-        {path:"/company", component:CompanyComponent},
-        {path:"/sendmail", component:SendmailComponent}
-        ])
 export class AppComponent {
     title = 'Curriculum vitae';
     

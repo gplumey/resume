@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouteSegment, ROUTER_DIRECTIVES} from '@angular/router';
+import { Router, ActivatedRoute} from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
 import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
@@ -13,29 +13,33 @@ import { CompanyService } from '../services/company.service';
     selector: 'company',
     templateUrl: 'company.component.html',
     styleUrls: ['company.component.css'],
-    directives: [MD_CARD_DIRECTIVES, MD_BUTTON_DIRECTIVES, ROUTER_DIRECTIVES],
+    directives: [MD_CARD_DIRECTIVES, MD_BUTTON_DIRECTIVES],
     providers: [CompanyService]
 })
 export class CompanyComponent implements OnInit {
     company: Company;
     private _id: number;
+    sub: any;
 
     constructor(
         private _companyService: CompanyService,
-        private _params: RouteSegment,
         private _router: Router,
+        private route: ActivatedRoute,
         private _title: Title) {
 
-        this._id = Number(_params.getParam("id"));
 
-        if (this._id !== undefined) {
-            this.company = this._companyService.getCompany(this._id);
-            this._title.setTitle(this.company.name);
-        }
     }
 
 
     ngOnInit() {
+        this.sub = this.route.params.subscribe(params => {
+            let id = +params['id'];
+            //   this.heroService.getHero(id)
+            //     .then(hero => this.hero = hero);
+            this.company = this._companyService.getCompany(id);
+            this._title.setTitle(this.company.name);
+        });
+
     }
 
 
