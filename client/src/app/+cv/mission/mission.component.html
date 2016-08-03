@@ -1,12 +1,15 @@
 <div class="mission">
-  <div class="date">{{mission.date}}</div>
+  <div class="date">{{mission.date}}<br>{{mission.duration}}</div>
   <div class="description">
     <div class="title">{{mission.label}}
        <a *ngIf="mission.company" [class.disabled]="mission.companyId==null" md-button 
        (click)="gotoCompanyDetail(mission.companyId)">{{mission.company}}</a>
        </div>
     <div class="subject">{{mission.subject}}</div>
-    <div class="env" *ngIf="mission.environment">{{mission.environment}}</div>
+    <ul *ngIf="mission.functions">
+      <li *ngFor="let lbl of mission.functions">{{lbl}}</li>
+    </ul>
+    <!--div class="env" *ngIf="mission.environment">{{mission.environment}}</div-->
   </div>
   <div style="clear:both;"></div>
 

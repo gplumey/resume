@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,55 +24,55 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
-/* line 25, cv.component.scss */
+/* line 26, cv.component.scss */
 .marginLeft {
   margin-left: 30px;
 }
 
-/* line 32, cv.component.scss */
+/* line 33, cv.component.scss */
 .cv-container {
   display: table;
   width: 100%;
@@ -84,14 +84,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 20px;
 }
 @media screen and (min-width: 1200px) {
-  /* line 32, cv.component.scss */
+  /* line 33, cv.component.scss */
   .cv-container {
     width: 1200px;
     margin-top: 30px;
     margin-bottom: 50px;
   }
 }
-/* line 41, cv.component.scss */
+/* line 42, cv.component.scss */
 .cv-container .cv-left-container {
   display: table-cell;
   width: 33%;
@@ -103,36 +103,47 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-color: #0099DD;
 }
 @media screen and (max-width: 900px) {
-  /* line 41, cv.component.scss */
+  /* line 42, cv.component.scss */
   .cv-container .cv-left-container {
     display: table-row;
   }
 }
 @media screen and (max-width: 900px) {
-  /* line 41, cv.component.scss */
+  /* line 42, cv.component.scss */
   .cv-container .cv-left-container {
     display: table-row;
     width: 100%;
   }
 }
-/* line 56, cv.component.scss */
+/* line 57, cv.component.scss */
 .cv-container .cv-left-container .picturePlusContact {
   display: inline-table;
   width: 100%;
 }
 /* line 61, cv.component.scss */
+.cv-container .cv-left-container .picturePlusContact .flags {
+  width: 110px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 65, cv.component.scss */
+.cv-container .cv-left-container .picturePlusContact .flags img {
+  width: 50px;
+  cursor: pointer;
+}
+/* line 70, cv.component.scss */
 .cv-container .cv-left-container .picturePlusContact .picture-container {
   display: table-row;
 }
 @media screen and (max-width: 900px) {
-  /* line 61, cv.component.scss */
+  /* line 70, cv.component.scss */
   .cv-container .cv-left-container .picturePlusContact .picture-container {
     display: table-cell;
     width: 50%;
     height: 100%;
   }
 }
-/* line 71, cv.component.scss */
+/* line 82, cv.component.scss */
 .cv-container .cv-left-container .picturePlusContact .picture-container .picture {
   width: 200px;
   height: 200px;
@@ -145,18 +156,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
-/* line 87, cv.component.scss */
+/* line 98, cv.component.scss */
 .cv-container .cv-left-container .picturePlusContact .contact {
   display: table-row;
 }
 @media screen and (max-width: 900px) {
-  /* line 87, cv.component.scss */
+  /* line 98, cv.component.scss */
   .cv-container .cv-left-container .picturePlusContact .contact {
     display: table-cell;
     width: 50%;
   }
 }
-/* line 98, cv.component.scss */
+/* line 109, cv.component.scss */
 .cv-container .cv-left-container .picturePlusContact .contact .name {
   font-weight: bold;
   font-size: 32px;
@@ -164,30 +175,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding-top: 15px;
   padding-left: 30px;
 }
-/* line 104, cv.component.scss */
+/* line 115, cv.component.scss */
 .cv-container .cv-left-container .picturePlusContact .contact address {
   display: block;
   padding-top: 15px;
   padding-left: 30px;
 }
-/* line 109, cv.component.scss */
+/* line 120, cv.component.scss */
 .cv-container .cv-left-container .picturePlusContact .contact age {
   display: block;
   padding-top: 15px;
   padding-left: 30px;
 }
-/* line 116, cv.component.scss */
+/* line 127, cv.component.scss */
 .cv-container .cv-left-container .picturePlusContact md-actions-bar {
   width: 100%;
   text-align: center;
 }
 @media screen and (max-width: 900px) {
-  /* line 122, cv.component.scss */
+  /* line 133, cv.component.scss */
   .cv-container .cv-left-container .additionalSections {
     display: none;
   }
 }
-/* line 131, cv.component.scss */
+/* line 142, cv.component.scss */
 .cv-container .cv-right-container {
   width: 67%;
   font-size: 20px;
@@ -197,18 +208,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-color: white;
 }
 @media screen and (max-width: 900px) {
-  /* line 131, cv.component.scss */
+  /* line 142, cv.component.scss */
   .cv-container .cv-right-container {
     display: table-row;
   }
 }
 @media screen and (max-width: 900px) {
-  /* line 131, cv.component.scss */
+  /* line 142, cv.component.scss */
   .cv-container .cv-right-container {
     width: 100%;
   }
 }
-/* line 142, cv.component.scss */
+/* line 153, cv.component.scss */
 .cv-container .cv-right-container .title {
   height: 100px;
   margin-top: 25;
@@ -216,12 +227,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: bold;
   font-size: 32px;
 }
-/* line 150, cv.component.scss */
+/* line 161, cv.component.scss */
+.cv-container .cv-right-container .catchPhrase {
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+/* line 167, cv.component.scss */
 .cv-container .cv-right-container skill {
   display: inline-block;
   width: 25%;
 }
-/* line 158, cv.component.scss */
+/* line 175, cv.component.scss */
 .cv-container .additionalSectionsSmallScreen {
   display: table;
   width: 100%;
@@ -233,24 +250,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding: 30px 0;
 }
 @media screen and (max-width: 900px) {
-  /* line 158, cv.component.scss */
+  /* line 175, cv.component.scss */
   .cv-container .additionalSectionsSmallScreen {
     display: table-row;
   }
 }
 @media screen and (min-width: 900px) {
-  /* line 158, cv.component.scss */
+  /* line 175, cv.component.scss */
   .cv-container .additionalSectionsSmallScreen {
     display: none;
   }
 }
-/* line 172, cv.component.scss */
+/* line 189, cv.component.scss */
 .cv-container .additionalSectionsSmallScreen skill {
   display: inline-block;
   width: 25%;
 }
 
-/* line 182, cv.component.scss */
+/* line 199, cv.component.scss */
 entry {
   display: block;
   padding-top: 15px;

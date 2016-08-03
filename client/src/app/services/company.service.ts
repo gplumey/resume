@@ -17,7 +17,7 @@ export class CompanyService {
         });
         this.companies.push({
             id: 1,
-            name: "IMS Health",
+            name: "IMS Health (ex Cegedim)",
             detail: "IMS Health est une entreprise américaine de conseils pour l’industrie du médicament et les acteurs de la santé.",
             url: "http://imshealth.com",
             image: "img/IMSHlogo2015.png"

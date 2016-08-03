@@ -1,6 +1,11 @@
 /// <reference path="jspdf.d.ts" />
-import { Component, OnInit, ElementRef} from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, ElementRef,
+    trigger,
+    state,
+    style,
+    transition,
+    animate} from '@angular/core';
+import { Router, ActivatedRoute} from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
 import {CurriculumVitae} from '../model/curriculumvitae.interface';
@@ -21,43 +26,42 @@ import {CvService } from '../services/cv.service';
     styleUrls: ['cv.component.css'],
     directives: [AddressComponent, SectionComponent, AgeComponent,
         SkillComponent, MissionComponent, SubsectionComponent],
-    providers: [CompanyService, CvService]
-
-
+    providers: [CompanyService, CvService],
+   
 })
 export class CvComponent implements OnInit {
 
 
     public cv: CurriculumVitae;
+    private sub: any;
+    public locale: string;
+   
+    public contactMap: { [key: string]: string } = {
+        'fr': 'Me contacter',
+        'en': 'Contact me'
+    };
 
     constructor(
         private _cvService: CvService,
-        private _myElement: ElementRef,
         private _title: Title,
-        private _router: Router) {
+        private _router: Router,
+        private route: ActivatedRoute) {
 
     }
+
     ngOnInit() {
-
-        this.cv = this._cvService.read(0);
-        this._title.setTitle("CV " + this.cv.firstName + " " + this.cv.lastName);
-
-    }
-
-    download() {
-
-        let doc = new jsPDF();
-        doc.fromHTML(this._myElement.nativeElement, 0, 0, {
-            'width': 800,
+        this.sub = this.route.params.subscribe(params => {
+            this.locale = params['locale'] || "fr";
+            this.cv = this._cvService.read(this.locale);
+            this._title.setTitle("CV " + this.cv.firstName + " " + this.cv.lastName);
         });
-        doc.save("Test.pdf");
+ 
     }
 
 
-    contactMe() {
-        this._router.navigate(["/sendmail"]);
+    public changeLocale(locale: string) {
+        this._router.navigate([locale]);
     }
-
 
 
 

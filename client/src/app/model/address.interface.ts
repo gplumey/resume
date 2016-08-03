@@ -3,4 +3,5 @@ export interface Address {
     streetLabel?:string;
     city:string;
     zipcode:string;
+    country:string;
 }

@@ -18,6 +18,7 @@
     .description
     {
         display: table-cell;
+        padding-right :  $v-margin * 2;
         width: 80%;
     }
 
@@ -31,4 +32,14 @@
         margin-top: $v-margin /2 ;
         color: $secondary-color;
     }
+
+    ul{
+        margin-top:$v-margin /2;
+        margin-left:$h-margin * 2;
+        li{
+            list-style-type:disc;
+
+        }
+    }
+
 }

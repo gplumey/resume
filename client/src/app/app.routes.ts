@@ -5,6 +5,7 @@ import { SendmailComponent } from './+sendmail/';
 
 const routes: RouterConfig = [
     { path: "", component: CvComponent },
+    { path: ":locale", component: CvComponent },
     { path: "company/:id", component: CompanyComponent },
     { path: "sendmail", component: SendmailComponent }
 ];

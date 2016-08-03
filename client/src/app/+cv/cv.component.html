@@ -1,18 +1,23 @@
+{{state}}
 <div class="cv-container">
     <div class="cv-left-container">
 
         <div class="picturePlusContact">
+            <div class="flags">
+                <img  src="/img/france.jpg" (click)="changeLocale('fr')"/>
+                <img  src="/img/usa.jpg" (click)="changeLocale('en')"/>
+            </div>
             <div class="picture-container">
                 <div class="picture">&nbsp;</div>
             </div>
             <div class="contact">
+                <entry>
+                    <a md-button [href]="cv.linkedin" [target]="_blank"> {{ locale | i18nSelect: contactMap }}</a>
+                </entry>
+               
                 <div class="name">{{cv.firstName}} {{cv.lastName}}</div>
                 <address [address]="cv.address"></address>
-                <entry>{{cv.phoneNumber}}</entry>
-                <md-actions-bar>
-                    <button md-button (click)="contactMe()">Me contacter</button>
-                </md-actions-bar>
-                <age [birthday]="cv.birthday" [gender]="cv.gender"></age>
+                <age [birthday]="cv.birthday" [gender]="cv.gender" [locale]="locale"></age>
                 <entry>{{cv.permit}}</entry>
             </div>
         </div>
@@ -26,7 +31,7 @@
     <div class="cv-right-container">
         <div class="title">{{cv.professionTitle}}
             <br>{{cv.professionSubTitle}}</div>
-
+        <div class="catchPhrase">{{cv.catchPhrase}}</div>
 
         <section *ngFor="let section of cv.sections" [section]="section" [styleClass]=" 'main' ">
             <mission *ngFor="let item of section.items" [mission]="item" class=""></mission>
