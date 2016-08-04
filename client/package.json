@@ -31,7 +31,6 @@
     "@angular2-material/core": "2.0.0-alpha.6-2",
     "@angular2-material/icon": "2.0.0-alpha.6-2",
     "@angular2-material/input": "2.0.0-alpha.6-2",
-    "@resume/common": "file:../common",
     "es6-shim": "0.35.1",
     "jspdf": "^1.2.61",
     "reflect-metadata": "0.1.3",

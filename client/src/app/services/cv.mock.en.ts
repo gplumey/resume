@@ -7,7 +7,6 @@ export var SKILLS_SECTION_EN:Section[] = [{
                     items: [
                         { label: "Java 8", score: 1 },
                         { label: "PL/SQL", score: 0.8 },
-                        { label: "HTML5/CSS3", score: 0.8 },
                         { label: "Javascript (ES6)", score: 0.7 },
                         { label: "TypdeScript", score: 0.7 }
                     ]
@@ -16,8 +15,7 @@ export var SKILLS_SECTION_EN:Section[] = [{
                     items: [
                         { label: "JEE", score: 0.8 },
                         { label: "Hibernate 4", score: 1 },
-                        { label: "Spring 4", score: 1 },
-                        { label: "JSF2/Primefaces", score: 0.8 }
+                        { label: "Spring 4", score: 1 }
                     ]
                 }, {
                     title: "Servers",
@@ -34,9 +32,12 @@ export var SKILLS_SECTION_EN:Section[] = [{
                 }, {
                     title: "Front-end",
                     items: [
+                        { label: "HTML5/CSS3", score: 0.8 },
+                        { label: "Sass", score: 0.8 },
                         { label: "Angular2", score: 0.6 },
                         { label: "jQuery", score: 0.6 },
-                        { label: "SDK Android", score: 0.4 }
+                        { label: "SDK Android", score: 0.4 },
+                        { label: "JSF2/Primefaces", score: 0.8 }
                     ]
                 }, {
                     title: "Databases",
@@ -46,7 +47,7 @@ export var SKILLS_SECTION_EN:Section[] = [{
                         { label: "MongoDB", score: 0.5 }            
                     ]
                 }, {
-                    title: "Méthology",
+                    title: "Methology",
                     items: [
                         { label: "Agile", score: 0.8 },
                         { label: "XP", score: 1 },
@@ -102,11 +103,11 @@ export var CV_EN: CurriculumVitae = {
                 { label: "Volley-ball", score: null }]
         }],
     sections: [{
-        title: "Professional skill",
+        title: "Professional skills",
         items: [
             {
                 label: "Software architect - Technical leader", date: "Since 2012", duration:"4 years", 
-                company: "IMS Health (old Cegedim)", /*companyId: 1,*/
+                company: "IMS Health (ex Cegedim)", /*companyId: 1,*/
                 subject: "Setting up the architecture for a global regulatory platform as Saas for the transparency of pharmaceutical companies.",
                 environment: "Java/JEE, Spring, Spring security, Spring batch, JSF 2.0, Primefaces, Hibernate, RestEasy, Soap, Javascript, Jquery, Oracle, Apache, Jboss 6, Maven 2, Selenium, Jenkins",
                 functions:[
@@ -122,7 +123,7 @@ export var CV_EN: CurriculumVitae = {
                     "Create a Proof of concept and explain to developers about a modern front-end framework (Angular2)."]    
             },
             {
-                label: "Confirmed software development engineer", date: "2010 to 2012", duration:"2 years", 
+                label: "Confirmed software engineer", date: "2010 to 2012", duration:"2 years", 
                 company: "Cegedim" , /*companyId: 0,*/
                 subject: "Development a data archiving and consolidation engine to feed data warehouses for business intelligence.",
                 environment: "Java/J2EE, Spring, Spring security, JSF 2.0, Hibernate, Javascript, Jquery, Oracle et SQL Server, Apache, Tomcat 6, Maven 2",
@@ -132,7 +133,7 @@ export var CV_EN: CurriculumVitae = {
                  ]   
          },
             {
-                label: "Junior software development engineer", date: "2008 to 2010",duration:"2 years", 
+                label: "Junior software engineer", date: "2008 to 2010",duration:"2 years", 
                 company: "Cegedim",/* companyId: 0,*/
                 subject: "Development and maintenance of software (CRM) helping pharmaceutical companies to organize promotional events and manage the activity of medical representatives.",
                 environment: "Java/J2EE, Flex 4, Oracle, Apache, Jboss 4, Maven",
@@ -159,7 +160,7 @@ export var CV_EN: CurriculumVitae = {
             // type: SectionCONST.SKILLS;
             sections: SKILLS_SECTION_EN// SKILLS_SECTION
         }],
-    professionTitle: "Senior software development engineer - Technical leader",
+    professionTitle: "Senior software engineer - Technical leader",
     professionSubTitle: " Java/JEE - Spring",
     catchPhrase:"8 years of experience in developing web applications in Java and object oriented programming"
 };

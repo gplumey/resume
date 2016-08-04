@@ -16,7 +16,7 @@ import {CvService} from '../services/cv.service';
 import { Skill } from '../model/skill.interface';
 import { Mail } from '../model/mail';
 
-import {CommonMail} from '@resume/common/dist/index';
+
 
 @Component({
     moduleId: module.id,
@@ -31,7 +31,7 @@ import {CommonMail} from '@resume/common/dist/index';
 export class SendmailComponent implements OnInit {
     skills: Skill[];
 
-    mail: CommonMail = new CommonMail("coucou", "helle");
+    //mail: CommonMail = new CommonMail("coucou", "helle");
 
     constructor(
         private _title: Title,
@@ -54,12 +54,12 @@ export class SendmailComponent implements OnInit {
          headers.append('Access-Control-Allow-Headers', 'Content-Type');
         headers.append('Access-Control-Allow-Methods', 'GET');
         headers.append('Access-Control-Allow-Origin', '*');
-        console.log(this.mail);
-        let s_Mail = JSON.stringify(this.mail);
-        console.log(s_Mail);
-        var path = "http://localhost:3000" + '/mail';
-        this._http.post(path, s_Mail, { headers: headers })
-        .subscribe();
+      //  console.log(this.mail);
+      //  let s_Mail = JSON.stringify(this.mail);
+      //  console.log(s_Mail);
+      //  var path = "http://localhost:3000" + '/mail';
+      //  this._http.post(path, s_Mail, { headers: headers })
+      //  .subscribe();
     }
 
     private handleError(error: any) {

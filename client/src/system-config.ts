@@ -43,7 +43,7 @@ const barrels: string[] = [
   // Thirdparty barrels.
   'rxjs',
   'jspdf',
-  '@resume/common',
+  
 
   // App specific barrels.
   'app',
